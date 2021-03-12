@@ -1,0 +1,29 @@
+## Zathura config
+set recolor true
+set recolor-lightcolor          \#2E3440
+set recolor-darkcolor           \#E5E9F0
+set highlight-color             \#5E81AC
+set highlight-active-color      \#81A1C1
+
+## Girara config
+set completion-bg               \#262626
+set completion-fg               \#FCE8C3
+set completion-group-bg         \#262626
+set completion-group-bg         \#D0BFA1
+set completion-highlight-bg     \#98BC37
+set completion-highlight-fg     \#262626
+set default-bg                  \#2E3440
+set default-fg                  \#D0BFA1
+set inputbar-bg                 \#3B4252
+set inputbar-fg                 \#98BC37
+set notification-error-bg       \#262626
+set notification-error-fg       \#BF616A
+set notification-warning-bg     \#262626
+set notification-warning-fg     \#EBCB8B
+set tabbar-bg                   \#262626
+set tabbar-fg                   \#8FBCBB
+set tabbar-focus-bg             \#262626
+set tabbar-focus-fg             \#A3BE8C
+set statusbar-bg                \#262626
+set statusbar-fg                \#8FBCBB
+
