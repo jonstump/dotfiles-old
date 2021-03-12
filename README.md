@@ -30,11 +30,5 @@ These are my dotfiles for multiple apps. Currently if you would like to use them
 
 * * *
 
-## License
-> [GPLv3](https://choosealicense.com/licenses/gpl-3.0/)\
-> Jon Stump &copy; 2021
-
-* * *
-
 ## Contact Information
 _Jon Stump: [Email](jmstump@gmail.com)_
