@@ -12,8 +12,21 @@ call plug#begin("~/.vim/plugged")
   Plug 'vim-ruby/vim-ruby'
   Plug 'skalnik/vim-vroom'
   Plug 'luochen1990/rainbow'
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  Plug 'gitgutter/Vim'
+
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'hrsh7th/nvim-compe'
+
 
 call plug#end()
+"============= Hexoinkase settings ==============
+let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
+
+let g:Hexokinase_ftOptInPatterns = {
+\     'css': 'full_hex,rgb,rgba,hsl,hsla,colour_names',
+\     'html': 'full_hex,rgb,rgba,hsl,hsla,colour_names'
+\ }
 
 "============= Color Scheme and Lightline ==============
 colorscheme nord
@@ -28,7 +41,7 @@ let g:lightline = {
       \   'gitbranch': 'gitbranch#name'
       \ },
       \ }
-
+let g:gitgutter_sign_column_always = 1
 "============= Nerdtree Settings ==============
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
