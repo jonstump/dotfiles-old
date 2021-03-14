@@ -94,4 +94,4 @@ set tabstop=2 shiftwidth=2
 set softtabstop=2
 highlight LineNr ctermfg=white
 let mapleader ="'"
-
+autocmd BufWritePre * :%s/\s\+$//e
