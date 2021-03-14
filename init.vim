@@ -21,8 +21,6 @@ call plug#begin("~/.vim/plugged")
 
 call plug#end()
 "============= Hexoinkase settings ==============
-let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
-
 let g:Hexokinase_ftOptInPatterns = {
 \     'css': 'full_hex,rgb,rgba,hsl,hsla,colour_names',
 \     'html': 'full_hex,rgb,rgba,hsl,hsla,colour_names'
