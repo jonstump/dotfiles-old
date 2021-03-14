@@ -11,7 +11,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-endwise'
   Plug 'vim-ruby/vim-ruby'
   Plug 'skalnik/vim-vroom'
-
+  Plug 'luochen1990/rainbow'
 
 call plug#end()
 
@@ -34,19 +34,35 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
-" Automaticaly close nvim if NERDTree is only thing left open
+
+" Automatically close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " Toggle
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+
+"============= Rainbow Settings ==============
+
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+	\	'separately': {
+	\		'nerdtree': 0,
+	\	}
+	\}
 
 "============= keybinding remaps ==============
 imap jj <Esc>
 
 "============= Vim Settings ==============
 syntax on
-set number 
+set number
+set relativenumber
 set noswapfile
 set hlsearch 
+set scrolloff=10
+set confirm
+set spell
+set guicursor=
 set ignorecase
 set smartcase
 set incsearch
