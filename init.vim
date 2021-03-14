@@ -13,8 +13,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'skalnik/vim-vroom'
   Plug 'luochen1990/rainbow'
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-  Plug 'gitgutter/Vim'
+  Plug 'airblade/vim-gitgutter'
 
+
+" Future LSP support for neovim
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'hrsh7th/nvim-compe'
 
@@ -39,7 +41,11 @@ let g:lightline = {
       \   'gitbranch': 'gitbranch#name'
       \ },
       \ }
+
+"============= gitgutter settings ==============
 let g:gitgutter_sign_column_always = 1
+
+
 "============= Nerdtree Settings ==============
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
