@@ -1,7 +1,9 @@
 "============= Plugin Section ==============
 call plug#begin("~/.vim/plugged")
   Plug 'scrooloose/nerdtree'
-  Plug 'ryanoasis/vim-devicons'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'itchyny/lightline.vim'
   Plug 'dense-analysis/ale'
   Plug 'itchyny/vim-gitbranch'
@@ -14,7 +16,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'luochen1990/rainbow'
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
   Plug 'airblade/vim-gitgutter'
-
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Future LSP support for neovim
 " Plug 'neovim/nvim-lspconfig'
@@ -22,6 +24,7 @@ call plug#begin("~/.vim/plugged")
 
 
 call plug#end()
+
 "============= Hexoinkase settings ==============
 let g:Hexokinase_ftOptInPatterns = {
 \     'css': 'full_hex,rgb,rgba,hsl,hsla,colour_names',
@@ -52,6 +55,19 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
 
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
+
 " Automatically close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -75,7 +91,7 @@ syntax on
 set number
 set relativenumber
 set noswapfile
-set hlsearch 
+set hlsearch
 set scrolloff=10
 set confirm
 set spell
@@ -95,3 +111,4 @@ set softtabstop=2
 highlight LineNr ctermfg=white
 let mapleader ="'"
 autocmd BufWritePre * :%s/\s\+$//e
+:autocmd OptionSet guicursor noautocmd set guicursor=
