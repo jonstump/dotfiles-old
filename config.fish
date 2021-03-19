@@ -13,8 +13,8 @@ alias gp='git push'
 alias gclone='git clone'
 alias update='doas apt update && doas apt autoremove && doas apt upgrade && brew update && brew upgrade && pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U && flatpak update && doas snap refresh'
 alias icat="kitty +kitten icat"
-alias vim="nvim"
-alias vi="nvim"
+# alias vim="nvim"
+# alias vi="nvim"
 alias integrated="system76-power graphics integrated && sleep 20 && reboot"
 alias nvidia="system76-power graphics nvidia && sleep 20 && reboot"
 #alias sudo='doas'
