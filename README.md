@@ -10,11 +10,17 @@ These are my dotfiles for multiple apps. Currently if you would like to use them
 
 ## App
 * Kitty
-* Fish
 * Ranger
 * Neovim
 * neofetch
 * zathura
+* zshrc
+
+* * *
+
+## Archive
+* Fish
+* Bashrc
 
 * * *
 
@@ -24,8 +30,6 @@ These are my dotfiles for multiple apps. Currently if you would like to use them
 * bpytop
 * VSCode/Codium
 * spicetify
-* bashrc
-* zshrc
 * script to install files
 
 * * *

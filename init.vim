@@ -5,6 +5,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'ryanoasis/vim-devicons'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'itchyny/lightline.vim'
+  Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
   Plug 'dense-analysis/ale'
   Plug 'itchyny/vim-gitbranch'
   Plug 'tpope/vim-commentary'
@@ -12,11 +13,14 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-fugitive'
   Plug 'Townk/vim-autoclose'
   Plug 'tpope/vim-endwise'
-  Plug 'vim-ruby/vim-ruby'
+"  Plug 'vim-ruby/vim-ruby'
   Plug 'skalnik/vim-vroom'
   Plug 'luochen1990/rainbow'
   Plug 'airblade/vim-gitgutter'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'sheerun/vim-polyglot'
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'vim-crystal/vim-crystal'
 
 
 "  " Future LSP support for neovim
@@ -25,6 +29,17 @@ call plug#begin("~/.vim/plugged")
 
 
 call plug#end()
+
+let g:ale_linters = {
+\   'markdown':      ['mdl', 'writegood'],
+\   'ruby':      ['rubocop'],
+\}
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '.'
+"let g:ale_sign_error                  = '✘'
+"let g:ale_sign_warning                = '⚠'
+highlight ALEErrorSign ctermbg        =NONE ctermfg=red
+highlight ALEWarningSign ctermbg      =NONE ctermfg=yellow
 "============= Color Scheme and Lightline ==============
 colorscheme nord
 
@@ -79,7 +94,9 @@ let g:rainbow_conf = {
 
 ""============= keybinding remaps ==============
 imap jj <Esc>
-let mapleader = "'"
+
+
+let mapleader = " "
 " Disable spell checking
 map <leader>S :setlocal spell!<CR>
 map <leader>c gcc
@@ -104,6 +121,9 @@ map <leader>! :qa!<CR>
 map <leader>r :%s///g
 map <leader>t :tabnew<CR>
 
+" which key
+nnoremap <silent> <leader> :WhichKey " "<CR>
+" nnoremap <silent> <Space> :call VSCodeNotify('whichkey.show')<CR>
 
 ""============= Vim Settings ==============
 syntax on
