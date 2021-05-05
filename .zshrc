@@ -92,6 +92,7 @@ plugins=(zsh-z common-aliases zsh-autosuggestions zsh-syntax-highlighting rails 
 source $ZSH/oh-my-zsh.sh
 eval "$(rbenv init -)"
 export TERM=kitty
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

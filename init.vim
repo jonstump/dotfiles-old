@@ -1,7 +1,7 @@
 "=========== Plugin Section ==============
 call plug#begin("~/.vim/plugged")
   Plug 'scrooloose/nerdtree'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'ryanoasis/vim-devicons'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'itchyny/lightline.vim'
@@ -21,12 +21,14 @@ call plug#begin("~/.vim/plugged")
   Plug 'sheerun/vim-polyglot'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'vim-crystal/vim-crystal'
+  " Plug 'pangloss/vim-javascript'
+  " Plug 'mxw/vim-jsx'
 
 
 "  " Future LSP support for neovim
 "" Plug 'neovim/nvim-lspconfig'
 "" Plug 'hrsh7th/nvim-compe'
-
+let g:jsx_ext_required = 0
 
 call plug#end()
 
@@ -81,7 +83,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Toggle
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+nnoremap <silent> <C-p> :NERDTreeToggle<CR>
 
 "============= Rainbow Settings ==============
 
@@ -94,12 +96,18 @@ let g:rainbow_conf = {
 
 ""============= keybinding remaps ==============
 imap jj <Esc>
-
+nnoremap <Tab> :tabnext<CR>
 
 let mapleader = " "
 " Disable spell checking
 map <leader>S :setlocal spell!<CR>
 map <leader>c gcc
+
+" Disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 " shortcuts for navigation
 map <C-h> <C-w>h
@@ -140,6 +148,7 @@ set incsearch
 set showmatch
 set cursorline
 set autoindent
+set smartindent
 set smarttab
 set expandtab
 set ruler
