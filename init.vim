@@ -21,6 +21,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'sheerun/vim-polyglot'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'vim-crystal/vim-crystal'
+  Plug 'shinchu/lightline-gruvbox.vim'
+  Plug 'morhetz/gruvbox'
   " Plug 'pangloss/vim-javascript'
   " Plug 'mxw/vim-jsx'
 
@@ -43,10 +45,10 @@ let g:ale_sign_warning = '.'
 highlight ALEErrorSign ctermbg        =NONE ctermfg=red
 highlight ALEWarningSign ctermbg      =NONE ctermfg=yellow
 "============= Color Scheme and Lightline ==============
-colorscheme nord
-
+" colorscheme nord
+let g:gruvbox_termcolors=16
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -140,7 +142,7 @@ set noswapfile
 set hlsearch
 set scrolloff=10
 set confirm
-set spell
+" set spell
 "" set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 set ignorecase
 set smartcase
