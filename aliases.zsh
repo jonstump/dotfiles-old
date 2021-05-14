@@ -23,3 +23,5 @@ alias license='mklicense'
 alias synology='doas mount.cifs //192.168.1.15/home /mnt/share -o credentials=/mount/credentials,uid=1000,gid=1000'
 alias spicetify=/home/jmstump/spicetify-cli/spicetify
 alias spicereload='spicetify backup apply enable-devtool'
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
